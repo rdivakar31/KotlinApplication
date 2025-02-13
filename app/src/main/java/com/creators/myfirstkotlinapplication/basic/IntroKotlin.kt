@@ -1,7 +1,6 @@
 package com.creators.myfirstkotlinapplication.basic
 
 
-
 /*
 * Kotlin
 * -> Starting point of the code is MAIN function, unless it's OOP/Android
@@ -29,5 +28,42 @@ fun main() {
     val name =
         "Adam" // Kotlin compiler is smart and automatically assigns a type when not mentioned
     val nameType: String = "Adam" // We can specify the Type based on our choice
+    var nameChangeable: String? = "Adam"
+    var count: Int? = null
+
+    nameChangeable = "Something new"
+    nameChangeable = null
+
+    count?.let {
+
+    }
+
+    count = 23
+
     println(name)
+    println("Changeable Name-> $nameChangeable, with a counter $count")
+
+    println(sumOfNumbers(2, 4))
+    println(sumOfNumbers1(2, 4))
+    println(sumOfNumbers2(2, 4))
+    println(sumFunction(c = 2, b = 2, a = 5))
 }
+
+/*
+* Write a function
+*
+* fun NAME_OF_FUNCTION ( PARAMETERS ): RETURN_TYPE { //block of code }
+* fun sumOfTwo (a: Int, b: Int): Int { return a+b }
+*
+* */
+
+fun sumOfNumbers(a: Int, b: Int): Int {
+    return a + b
+}
+
+fun sumOfNumbers1(a: Int, b: Int): Int = a + b
+
+fun sumOfNumbers2(a: Int, b: Int) = a + b
+
+fun sumFunction(a: Int, b: Int, c: Int = 0) = a + b + c
+
